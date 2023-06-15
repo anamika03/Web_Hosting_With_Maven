@@ -34,13 +34,13 @@ To host your webpage on port 8080, follow these steps:
    mvn clean package
    ```
 
-5. Start the web server on port 8080:
+5. Execute the .jar/.war file generated in target folder:
 
    ```shell
-   mvn jetty:run
+   java -jar target/jar_file_name.jar
    ```
 
-7. Open your web browser and visit `http://localhost:8080` to see your webpage.
+6. Open your web browser and visit `http://localhost:8080` to see your webpage.
 
 ## Customizing Your Webpage
 
