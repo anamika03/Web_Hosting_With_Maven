@@ -12,51 +12,50 @@ Before you proceed, make sure you have the following prerequisites installed:
 ## Getting Started
 
 To host your webpage on port 8080, follow these steps:
-
-1. Fork this repository:
    
-2. Clone this repo on your local computer:
+1. Clone this repo on your local computer:
 
    ```shell
    git clone https://github.com/your-username/your-repo.git
    ```
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
 
    ```shell
    cd your-repo
    ```
 
-4. Build the project using Maven:
+3. Build the project using Maven:
 
    ```shell
    mvn clean install
    mvn clean package
    ```
 
-5. Execute the .jar/.war file generated in target folder:
+4. Execute the .jar/.war file generated in target folder:
 
    ```shell
    java -jar target/jar_file_name.jar
    ```
 
-6. Open your web browser and visit `http://localhost:8080` to see your webpage.
+5. Open your web browser and visit `http://localhost:8080` to see your webpage.
 
 ## Customizing Your Webpage
 
 To customize your webpage, follow these steps:
 
-1. Locate the `index.html` file under the `src/main/webapp` directory.
+1. Locate the `StartApplication.java` file under the `src/main/` directory.
 
-2. Edit the `index.html` file using your favorite text editor or HTML editor.
+2. Edit the `StartApplication.java` as per your choice.
 
 3. Save your changes.
 
 4. Restart the web server:
 
    ```shell
-   mvn jetty:stop
-   mvn jetty:run
+   mvn clean
+   mvn clean package
+   java -jar target/jar_file_name.jar
    ```
 
    This will apply your modifications and make them accessible at `http://localhost:8080`.
@@ -98,4 +97,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact the project maintainer at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or suggestions, please feel free to contact at anamikasingh361996@gmail.com
