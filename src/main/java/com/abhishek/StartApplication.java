@@ -1,25 +1,25 @@
-package com.abhishek;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-@SpringBootApplication
-@Controller
-public class StartApplication {
-
-    @GetMapping("/")
-    public String index(final Model model) {
-        model.addAttribute("title", "This is a SpringBoot Static Web Application");
-        model.addAttribute("msg", "Application Is Deployed To Kubernates");
-        model.addAttribute("msg", "Application Is Deployed By Anamika");
-        return "index";
+public class HomePageServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Home Page</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Welcome to the Home Page!</h1>");
+        out.println("<p>This is a simple home page created using Java Servlet.</p>");
+        out.println("</body>");
+        out.println("</html>");
     }
-
-    public static void main(String[] args) {
-        SpringApplication.run(StartApplication.class, args);
-    }
-
 }
