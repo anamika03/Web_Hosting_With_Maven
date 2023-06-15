@@ -44,9 +44,9 @@ To host your webpage on port 8080, follow these steps:
 
 To customize your webpage, follow these steps:
 
-1. Locate the `StartApplication.java` file under the `src/main/` directory.
+1. Locate the `index.html` file under the `src/main/resources/templates/` directory.
 
-2. Edit the `StartApplication.java` as per your choice.
+2. Edit the `index.html` as per your choice.
 
 3. Save your changes.
 
